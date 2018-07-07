@@ -1,0 +1,15 @@
+<article>
+    <mat-toolbar style="padding:0px; background-color: #fff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); color: #5878d8; ">
+      <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-between center">
+        <div fxFlex="80" style="margin-left: 25px;">
+          <h1 style="font-size: 20px;">Wallet Overview: Bitcoin (BTC)</h1>
+        </div>
+        <div fxFlex="10" dir="rtl" style="margin-right: 45px;">
+            <button mat-raised-button class="btn" style="background-color: #5878d8; color: white;" (click)="createWallet()">CREATE WALLET</button>
+        </div>
+        <div fxFlex="10" dir="rtl" style="margin-right: 45px;">
+            <button mat-raised-button class="btn" (click)="logout()">LOG OUT</button>
+        </div>
+      </div>
+    </mat-toolbar>
+</article>

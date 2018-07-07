@@ -1,0 +1,15 @@
+.width{
+    width: 100%;
+}
+.heading{
+    text-align: center;
+}
+.btn{
+    color: white;
+    padding: 3px 144px;
+    background-color: #5878d8;
+    font-size: 16px;
+}
+h1{
+    color: #2851cd;
+}

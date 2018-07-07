@@ -1,0 +1,19 @@
+ <!-- <app-header></app-header> -->
+<!-- <router-outlet></router-outlet>  -->
+
+<div style="position: fixed;left: 290px;top: 0rem;z-index: 9;" *ngIf="sessionUser" >
+    <!-- <button mat-icon-button (click)="sidenav.toggle()" style="width:60px;height:60px;margin-left:-16px;border-radius:0%">
+      <mat-icon class="material-icons" style="color:black; font-size: 35px;">view_headline</mat-icon>
+    </button> -->
+</div>
+<div id="loading" *ngIf="showLoader">
+    <mat-spinner></mat-spinner>
+</div>
+<mat-sidenav-container>
+<mat-sidenav #sidenav [mode]="navMode" opened="true" *ngIf="sessionUser"  style="background-color: #fff;height: 100vh;width: 280px;">
+    <app-menu></app-menu>
+</mat-sidenav>
+<mat-sidenav-content>
+    <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>

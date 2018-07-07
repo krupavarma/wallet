@@ -1,0 +1,26 @@
+<app-header></app-header>
+<main class="Aligner" style="background: url(assets/poc-bg.svg) no-repeat center center fixed; background-size: cover; height: 90vh;">
+    <div class="Aligner-item">
+      <mat-card>
+          <form   [formGroup]="UserDetailsForm" novalidate autocomplete="off" (ngSubmit)="loginUser(login)" >
+            <h1 class="heading">LOGIN </h1>
+            <h3>{{errorMessage}}</h3>
+            <div>
+              <mat-form-field class="width">
+                <input matInput type="text" placeholder="Email" [(ngModel)]="login.email" formControlName="email" >
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="width">
+                  <input matInput type="password" placeholder="Password" [(ngModel)]="login.password" formControlName="password"  >
+                </mat-form-field>
+            </div>
+            <button mat-raised-button class="btn">Login</button>
+            <div style="text-align: center; margin: 15px 0px 10px 0px; font-size: 16px; font-weight: bold;">
+              <a routerLink='/resetpassword' class="color">Request a Password Reset</a>
+            </div>
+            </form>
+      </mat-card>
+
+  </div>
+</main>

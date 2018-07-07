@@ -1,0 +1,45 @@
+<aside>
+  <article>
+    <app-wheader></app-wheader>
+  </article>
+  <main>
+      <div fxLayout="row wrap">
+          <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="33.333" fxFlex.lg="25" style="padding:4px" *ngFor="let item of walletList[0].wallet; let i of index">
+            <mat-card class="margin-side" class="course-card"  style="cursor:pointer;  height:225px">
+              <div fxLayout="row wrap">
+                <!-- <div fxFlex.xs="100" fx.Flex.sm="50" fx.flex.md="33.333">
+                  <div class="vpair">
+                    <span>Email: </span>
+                    <span>{{item.email}}</span>
+                  </div>
+                  <div class="hpair">
+                    <span>Mobile: </span>
+                    <span>{{item.mobile}}</span>
+                  </div>
+                </div> -->
+                <div fxFlex="100">
+                    <div class="hpair">
+                        <span>Wallet Id: </span>
+                        <span>{{item.walletid}}</span>
+                    </div>
+                  <!-- <h2 >Wallet{{item.walletid}}</h2> -->
+                  <div fxLayout="row" fxLayoutAlign="center center" style="padding-top: 22px;" *ngIf="!balance">
+                    <button mat-raised-button (click)="checkBalance(i)">Balance</button>
+                  </div>
+                  <div fxLayout="row" fxLayoutAlign="center center" style="padding-top: 22px;" *ngIf="balance">
+                      <h2>BTC: </h2>
+                    </div>
+                  <div fxLayout="row" fxLayoutAlign="space-around center" style="padding-top: 35px;">
+                    <button mat-raised-button id="send-btn" (click)="sendWallet()" >Send</button>
+                    <button mat-raised-button id="receive-btn" (click)="receiveWallet()">Receive</button>
+                    <button mat-raised-button id="delete-btn" (click)="deleteWallet()" >Delete</button>
+                  </div>
+                </div>
+              </div>
+    
+            </mat-card>
+          </div>
+        </div>
+  </main>
+</aside>
+

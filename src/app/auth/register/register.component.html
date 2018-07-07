@@ -1,0 +1,35 @@
+<app-header></app-header>
+    <main class="Aligner" style="background: url(assets/poc-bg.svg) no-repeat center center fixed; background-size: cover; height: 90vh;">
+        <div class="Aligner-item">
+          <mat-card>
+              <form [formGroup]="UserDetailsForm" novalidate autocomplete="off" (ngSubmit)="Register()">
+                <h1 class="heading">CREATE ACCOUNT</h1>
+                <p class="red">{{response}}</p>
+                  <div>
+                      <mat-form-field class="width">
+                        <input matInput type="text" placeholder="UserName (Optional)" [(ngModel)]="register.username" formControlName="username">
+                      </mat-form-field>
+                    </div>
+                <div >
+                  <mat-form-field class="width">
+                    <input matInput type="email" placeholder="Email" [(ngModel)]="register.email" formControlName="email">
+                  </mat-form-field>
+                </div>
+                <div >
+                  <mat-form-field class="width">
+                      <input matInput type="password" placeholder="Password" [(ngModel)]="register.password" formControlName="password">
+                    </mat-form-field>
+                </div>
+                <div >
+                    <mat-form-field class="width">
+                        <input matInput type="password" placeholder="Repeat Password">
+                      </mat-form-field>
+                </div>
+                <button mat-raised-button class="btn">Proceed</button>
+                </form>
+          </mat-card>
+        
+      
+      </div>
+    </main>
+    
